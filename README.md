@@ -42,13 +42,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import chisquare from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-chisquare@deno/mod.js';
+import chisquare from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-chisquare@v0.2.0-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-chisquare@deno/mod.js';
+import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-chisquare@v0.2.0-deno/mod.js';
 ```
 
 #### chisquare( len, k\[, options] )
@@ -336,7 +336,7 @@ var sz = random.byteLength;
 
 ```javascript
 import logEach from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each@deno/mod.js';
-import chisquare from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-chisquare@deno/mod.js';
+import chisquare from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-chisquare@v0.2.0-deno/mod.js';
 
 // Create a function for generating random arrays originating from the same state:
 var random = chisquare.factory( 2.0, {
