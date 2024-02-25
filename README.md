@@ -35,32 +35,20 @@ limitations under the License.
 
 > Create an array containing pseudorandom numbers drawn from a [chi-square][@stdlib/random/base/chisquare] distribution.
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/random-array-chisquare
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var chisquare = require( '@stdlib/random-array-chisquare' );
+import chisquare from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-chisquare@deno/mod.js';
+```
+
+You can also import the following named exports from the package:
+
+```javascript
+import { factory } from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-chisquare@deno/mod.js';
 ```
 
 #### chisquare( len, k\[, options] )
@@ -98,7 +86,7 @@ var out = chisquare( 10, 2.0, opts );
 Fills an array with pseudorandom numbers drawn from a [chi-square][@stdlib/random/base/chisquare] distribution.
 
 ```javascript
-var zeros = require( '@stdlib/array-zeros' );
+import zeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-zeros@deno/mod.js';
 
 var x = zeros( 10, 'float64' );
 // returns <Float64Array>
@@ -164,7 +152,7 @@ The function accepts the following `options`:
 To use a custom PRNG as the underlying source of uniformly distributed pseudorandom numbers, set the `prng` option.
 
 ```javascript
-var minstd = require( '@stdlib/random-base-minstd' );
+import minstd from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-minstd@deno/mod.js';
 
 var opts = {
     'prng': minstd.normalized
@@ -227,7 +215,7 @@ var seed = chisquare.seed;
 If the `factory` method is provided a PRNG for uniformly distributed numbers, the associated property value on the returned function is `null`.
 
 ```javascript
-var minstd = require( '@stdlib/random-base-minstd-shuffle' ).normalized;
+var minstd = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-minstd-shuffle' ).normalized;
 
 var random = chisquare.factory( 2.0, {
     'prng': minstd
@@ -249,7 +237,7 @@ var len = chisquare.seedLength;
 If the `factory` method is provided a PRNG for uniformly distributed numbers, the associated property value on the returned function is `null`.
 
 ```javascript
-var minstd = require( '@stdlib/random-base-minstd-shuffle' ).normalized;
+var minstd = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-minstd-shuffle' ).normalized;
 
 var random = chisquare.factory( 2.0, {
     'prng': minstd
@@ -271,7 +259,7 @@ var state = chisquare.state;
 If the `factory` method is provided a PRNG for uniformly distributed numbers, the associated property value on the returned function is `null`.
 
 ```javascript
-var minstd = require( '@stdlib/random-base-minstd-shuffle' ).normalized;
+var minstd = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-minstd-shuffle' ).normalized;
 
 var random = chisquare.factory( 2.0, {
     'prng': minstd
@@ -293,7 +281,7 @@ var len = chisquare.stateLength;
 If the `factory` method is provided a PRNG for uniformly distributed numbers, the associated property value on the returned function is `null`.
 
 ```javascript
-var minstd = require( '@stdlib/random-base-minstd-shuffle' ).normalized;
+var minstd = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-minstd-shuffle' ).normalized;
 
 var random = chisquare.factory( 2.0, {
     'prng': minstd
@@ -315,7 +303,7 @@ var sz = chisquare.byteLength;
 If the `factory` method is provided a PRNG for uniformly distributed numbers, the associated property value on the returned function is `null`.
 
 ```javascript
-var minstd = require( '@stdlib/random-base-minstd-shuffle' ).normalized;
+var minstd = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-minstd-shuffle' ).normalized;
 
 var random = chisquare.factory( 2.0, {
     'prng': minstd
@@ -347,8 +335,8 @@ var sz = random.byteLength;
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-var logEach = require( '@stdlib/console-log-each' );
-var chisquare = require( '@stdlib/random-array-chisquare' );
+import logEach from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each@deno/mod.js';
+import chisquare from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-chisquare@deno/mod.js';
 
 // Create a function for generating random arrays originating from the same state:
 var random = chisquare.factory( 2.0, {
@@ -404,7 +392,7 @@ logEach( '%f', x4 );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -467,13 +455,13 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/random-array-chisquare/main/LICENSE
 
-[@stdlib/random/base/chisquare]: https://github.com/stdlib-js/random-base-chisquare
+[@stdlib/random/base/chisquare]: https://github.com/stdlib-js/random-base-chisquare/tree/deno
 
-[@stdlib/array/typed-real-float-dtypes]: https://github.com/stdlib-js/array-typed-real-float-dtypes
+[@stdlib/array/typed-real-float-dtypes]: https://github.com/stdlib-js/array-typed-real-float-dtypes/tree/deno
 
-[@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32
+[@stdlib/array/uint32]: https://github.com/stdlib-js/array-uint32/tree/deno
 
-[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64
+[@stdlib/array/float64]: https://github.com/stdlib-js/array-float64/tree/deno
 
 </section>
 
