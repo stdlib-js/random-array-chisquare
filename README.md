@@ -389,6 +389,7 @@ logEach( '%f', x4 );
 
 ## See Also
 
+-   <span class="package-name">[`@stdlib/random-chisquare`][@stdlib/random/chisquare]</span><span class="delimiter">: </span><span class="description">generate pseudorandom numbers drawn from a chi-square distribution.</span>
 -   <span class="package-name">[`@stdlib/random-base/chisquare`][@stdlib/random/base/chisquare]</span><span class="delimiter">: </span><span class="description">Chi-square distributed pseudorandom numbers.</span>
 -   <span class="package-name">[`@stdlib/random-strided/chisquare`][@stdlib/random/strided/chisquare]</span><span class="delimiter">: </span><span class="description">fill a strided array with pseudorandom numbers drawn from a chi-square distribution.</span>
 
@@ -477,6 +478,8 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [@stdlib/array/float64]: https://github.com/stdlib-js/array-float64
 
 <!-- <related-links> -->
+
+[@stdlib/random/chisquare]: https://github.com/stdlib-js/random-chisquare
 
 [@stdlib/random/strided/chisquare]: https://github.com/stdlib-js/random-strided-chisquare
 
